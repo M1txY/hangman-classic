@@ -12,7 +12,7 @@ var reader = bufio.NewReader(os.Stdin)
 func ReadGuess() (guess string, err error) {
 	valid := false
 	for !valid {
-		fmt.Print("What is your letter? ")
+		fmt.Print("Quelle est votre lettre ? ")
 		guess, err = reader.ReadString('\n')
 		if err != nil {
 			return "", err
@@ -20,7 +20,7 @@ func ReadGuess() (guess string, err error) {
 		guess = strings.TrimSpace(guess)
 
 		if len(guess) != 1 {
-			fmt.Printf("Invalid letter size. letter=%v, len=%v", guess, len(guess))
+			fmt.Printf("Taille de lettre invalide. lettre =%v, len=%v", guess, len(guess))
 			continue
 		}
 		valid = true

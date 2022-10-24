@@ -28,7 +28,7 @@ func Load(filename string) error {
 }
 
 func PickWord() string {
-	// Reset seed to be always different
+	// Reset la seed
 	rand.Seed(time.Now().Unix())
 	i := rand.Intn(len(words))
 	return words[i]
